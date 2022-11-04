@@ -18,3 +18,8 @@ def film_show(request):
 def film_detail(request, id):
     show =get_object_or_404(models.Film, id=id)
     return render(request, "film_detail.html", {"film":show})
+
+
+def director(request, id):
+    director =get_object_or_404(models.Director, id=id)
+    return render(request, 'director_id.html',{'director':director} )
